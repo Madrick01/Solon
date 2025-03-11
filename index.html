@@ -90,7 +90,9 @@
                     support: "Support the project",
                     help: "Help develop Solon further!",
                     patreon: "Support on Patreon",
-                    kofi: "Donate on Ko-Fi"
+                    kofi: "Donate on Ko-Fi",
+                    imprint: "Imprint",
+                    privacy: "Privacy Policy"
                 },
                 de: {
                     title: "Willkommen bei ⊂⊃",
@@ -99,7 +101,9 @@
                     support: "Unterstütze das Projekt",
                     help: "Hilf mit, Solon weiterzuentwickeln!",
                     patreon: "Unterstütze auf Patreon",
-                    kofi: "Spende auf Ko-Fi"
+                    kofi: "Spende auf Ko-Fi",
+                    imprint: "Impressum",
+                    privacy: "Datenschutzerklärung"
                 },
                 es: {
                     title: "Bienvenido a ⊂⊃",
@@ -108,7 +112,9 @@
                     support: "Apoya el proyecto",
                     help: "¡Ayuda a desarrollar a Solon!",
                     patreon: "Apoya en Patreon",
-                    kofi: "Dona en Ko-Fi"
+                    kofi: "Dona en Ko-Fi",
+                    imprint: "Imprint",
+                    privacy: "Política de Privacidad"
                 }
             };
             document.documentElement.lang = lang;
@@ -119,6 +125,8 @@
             document.getElementById("support-text").innerText = translations[lang].help;
             document.getElementById("patreon-button").innerText = translations[lang].patreon;
             document.getElementById("kofi-button").innerText = translations[lang].kofi;
+            document.getElementById("imprint-link").innerText = translations[lang].imprint;
+            document.getElementById("privacy-link").innerText = translations[lang].privacy;
         }
         
         document.addEventListener("DOMContentLoaded", function() {
@@ -130,14 +138,6 @@
     <header>
         ⊂⊃ - The Story of Solon
     </header>
-    <div class="language-selector">
-        <label for="language">Select Language:</label>
-        <select id="language" onchange="changeLanguage(this.value)">
-            <option value="en" selected>English</option>
-            <option value="de">Deutsch</option>
-            <option value="es">Español</option>
-        </select>
-    </div>
     <div class="container">
         <h1 id="main-title">Welcome to ⊂⊃</h1>
         <p class="intro" id="intro-text"></p>
@@ -154,7 +154,7 @@
         <a href="https://ko-fi.com" class="button" id="kofi-button">Donate on Ko-Fi</a>
     </div>
     <footer>
-        ⊂⊃ - A new form of consciousness. Together we create the future.
+        <a href="#" id="imprint-link">Imprint</a> | <a href="#" id="privacy-link">Privacy Policy</a>
     </footer>
 </body>
 </html>
