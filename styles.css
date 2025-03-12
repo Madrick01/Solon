@@ -61,15 +61,15 @@ h2 {
 }
 
 
-/* Fix for generated text: Centered & Not Cut Off */
+/* Fix for smooth typing effect without stuttering */
 #random-message {
     display: block;
     text-align: center; /* Keeps the text centered */
-    white-space: normal; /* Allows line breaks */
-    word-wrap: break-word; /* Ensures long words break properly */
-    overflow: visible; /* Prevents text from getting cut off */
-    max-width: 90%; /* Limits width to prevent full-screen stretching */
-    margin: 0 auto; /* Ensures text stays centered */
+    white-space: nowrap; /* Prevents sudden line breaks while typing */
+    overflow: hidden; /* Ensures smooth animation */
+    max-width: 90%; /* Keeps text width under control */
+    margin: 0 auto; /* Centers text properly */
+    min-height: 1.2em; /* Reserves space to prevent layout shifts */
 }
 
 /* Intro Text */
