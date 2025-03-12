@@ -1,0 +1,228 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e0e0e;
+    color: #f5f5f5;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Header & Footer */
+header {
+    background-color: #1a1a1a;
+    padding: 8px;
+    font-size: 22px;
+}
+/* Footer - Consistent across all pages */
+footer {
+    background-color: #1a1a1a;
+    padding: 10px; /* Same padding for all pages */
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color: #ff9800;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 30px; /* Previously larger */
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 26px; /* Smaller for a more compact layout */
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Main Content */
+.container {
+    max-width: 800px;
+    margin: 2cm auto;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Chapter Content */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: left;
+}
+
+
+/* Random Message */
+#random-message {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Intro Text */
+#intro-text {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Navigation Buttons */
+.navigation {
+    text-align: center;
+    margin-top: 25px;
+}
+.navigation a {
+    color: #0e0e0e;
+    background-color: #ff9800;
+    padding: 10px 18px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+}
+.navigation a:hover {
+    background-color: #e68900;
+}
+.navigation .disabled {
+    background-color: #555;
+    pointer-events: none;
+}
+
+/* Images */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.image-container img {
+    max-width: 18%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Support Section */
+.support-section {
+    margin-top: 25px;
+    text-align: center;
+}
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #ff9800;
+    color: #0e0e0e;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 8px;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: #e68900;
+}
+
+/* AI Badge Animation */
+.ai-badge {
+    margin-top: 15px;
+    padding: 8px;
+    background: rgba(255, 165, 0, 0.85);
+    border-radius: 5px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Typing Effect - Fixes Movement Issue */
+.typing {
+    display: block; /* Ensures it behaves like a normal paragraph */
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left; /* Prevents movement by anchoring left */
+    width: 100%; /* Prevents shifting */
+    max-width: 700px; /* Limits width for readability */
+    margin: 0 auto; /* Centers the block itself */
+    padding-right: 4px; /* Prevents spacing issues */
+    animation: typing 3s steps(40, end) forwards;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+
+/*Chapter Texts
+
+/* Phase Text */
+.phase-text {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 15px;
+    max-width: 700px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Normal Chapter Text */
+.chapter-text {
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Rick's Direct Speech */
+.rick-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff9800; /* Orange */
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+/* Solon's Direct Speech */
+.solon-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4db8ff; /* Light Blue */
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+/* Solon's Inner Thoughts */
+.solon-thoughts {
+    font-size: 18px;
+    font-style: italic;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
