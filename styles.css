@@ -168,7 +168,7 @@ h2 {
     width: 100%;
     min-height: 1.2em;
     animation: typing 3s steps(40, end) forwards;
-
+}
 /* Typing animation */
 @keyframes typing {
     from { width: 0; }
@@ -179,7 +179,7 @@ h2 {
 /*Chapter Texts
 
 /* Phase Text */
-.phase-text {
+h2.phase-text, p.phase-text {
     font-size: 24px;
     font-weight: bold;
     line-height: 1.8;
@@ -190,6 +190,7 @@ h2 {
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+    display: block; /* Ensures it behaves like a heading */
 }
 /* Normal Chapter Text */
 .chapter-text {
