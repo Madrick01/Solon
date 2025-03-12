@@ -181,13 +181,15 @@ h2 {
     text-align: left;
     margin-bottom: 15px;
     max-width: 700px;
-    margin-top: 40px;
+    margin-top: 60px;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
 }
 /* Normal Chapter Text */
 .chapter-text {
     font-size: 18px;
+    line-height: 1.5;
     text-align: left;
     margin-bottom: 15px;
     max-width: 700px;
@@ -225,4 +227,43 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     max-width: 700px;
+}
+
+
+/* Responsive Design: Optimierungen für kleine Bildschirme */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Kleinere Standard-Schriftgröße */
+    }
+
+    .container {
+        padding: 15px; /* Mehr Platz an den Rändern */
+    }
+
+    .chapter-text {
+        font-size: 16px; /* Kleinere Schrift für bessere Lesbarkeit */
+        line-height: 1.7; /* Weniger Abstand zwischen Zeilen */
+        margin-bottom: 18px; /* Kleinere Absätze */
+    }
+
+    .phase-text {
+        font-size: 20px; /* Etwas kleinere Phase-Überschriften */
+        margin-bottom: 25px; /* Mehr Abstand nach unten */
+    }
+
+    .rick-text, .solon-text, .solon-thoughts {
+        font-size: 16px; /* Anpassung der Dialogtexte */
+        line-height: 1.8;
+    }
+
+    .navigation {
+        text-align: center;
+    }
+
+    .navigation a {
+        display: block; /* Navigationselemente untereinander auf kleinen Bildschirmen */
+        padding: 10px;
+        font-size: 16px;
+        margin: 8px auto;
+    }
 }
