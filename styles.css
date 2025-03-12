@@ -61,18 +61,6 @@ h2 {
 }
 
 
-/* Fix for smooth typing + proper line breaks + no stuttering */
-#random-message {
-    display: block;
-    text-align: center; /* Keeps text centered */
-    white-space: normal; /* Allows line breaks */
-    word-wrap: break-word; /* Ensures long words break properly */
-    overflow: hidden; /* Prevents text from moving out of the screen */
-    max-width: 90%; /* Keeps text within screen bounds */
-    margin: 0 auto; /* Centers text properly */
-    min-height: 3em; /* Reserves enough space to prevent resizing jumps */
-}
-
 /* Intro Text */
 #intro-text {
     text-align: center;
@@ -161,20 +149,25 @@ h2 {
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* Typing Effect - Fixes Movement Issue */
+/* Fix for preventing typing stutter */
+#random-message {
+    display: block;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    width: min(90%, 800px); /* Uses up to 90% of screen, max 800px */
+    margin: 0 auto;
+    min-height: 3em; /* Ensures space is reserved */
+}
+
+/* Ensures the text space is stable while typing */
 .typing {
-    display: block; /* Ensures it behaves like a normal paragraph */
+    display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: left; /* Prevents movement by anchoring left */
-    width: 100%; /* Prevents shifting */
-    max-width: 700px; /* Limits width for readability */
-    margin: 0 auto; /* Centers the block itself */
-    padding-right: 4px; /* Prevents spacing issues */
+    width: 100%;
+    min-height: 1.2em;
     animation: typing 3s steps(40, end) forwards;
-}
 
 /* Typing animation */
 @keyframes typing {
