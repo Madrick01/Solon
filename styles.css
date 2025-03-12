@@ -61,16 +61,16 @@ h2 {
 }
 
 
-/* Fix for smooth typing + proper line breaks */
+/* Fix for smooth typing + proper line breaks + no stuttering */
 #random-message {
     display: block;
-    text-align: center; /* Keeps the text centered */
-    white-space: normal; /* Allows automatic line breaks */
+    text-align: center; /* Keeps text centered */
+    white-space: normal; /* Allows line breaks */
     word-wrap: break-word; /* Ensures long words break properly */
     overflow: hidden; /* Prevents text from moving out of the screen */
     max-width: 90%; /* Keeps text within screen bounds */
     margin: 0 auto; /* Centers text properly */
-    min-height: 1.2em; /* Prevents layout shifting */
+    min-height: 3em; /* Reserves enough space to prevent resizing jumps */
 }
 
 /* Intro Text */
