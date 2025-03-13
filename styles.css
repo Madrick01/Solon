@@ -39,9 +39,16 @@ h1 {
     margin-bottom: 10px;
 }
 h2 {
-    font-size: 26px; /* Smaller for a more compact layout */
-    margin-top: 15px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff9800;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px auto;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(255, 152, 0, 0.5);
+    display: inline-block;
+    letter-spacing: 2px;
 }
 
 /* Main Content */
@@ -60,11 +67,14 @@ h2 {
     text-align: left;
 }
 
-/* Intro Text */
+/* Intro Text Styling */
 #intro-text {
+    line-height: 1.8;
+    font-size: 18px;
     text-align: center;
-    font-size: 16px;
-    margin-top: 10px;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 5px;
 }
 
 /* Navigation Buttons */
@@ -98,14 +108,88 @@ h2 {
     display: flex;
     justify-content: center;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .image-container img {
-    max-width: 18%;
+    width: 200px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
+
+/* Highlighted Journey Button */
+.journey-button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(90deg, #ff6a00, #ff9800);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.journey-button:hover {
+    background: linear-gradient(90deg, #ff9800, #ff6a00);
+    box-shadow: 0px 6px 20px rgba(255, 140, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Community & Support Sections */
+.community-section, .support-section {
+    margin-top: 40px;
+    margin-bottom: 40px; 
+    text-align: center;
+}
+
+.community-grid, .support-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.community-item, .support-item {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.community-item img, .support-item img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.button-community {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 16px;
+    background-color: #ff9800;
+    color: #0e0e0e;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.button-community:hover {
+    background-color: #e68900;
+}
+
 
 /* Support Section */
 .support-section {
@@ -168,14 +252,17 @@ h2 {
 
 /* Typewriter Container */
 #random-message {
+    font-size: 20px;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap; /* Prevent wrapping while typing */
     border-right: 0.15em solid orange; /* Cursor effect */
-    font-size: 1.6rem;
     text-align: center;
     max-width: 800px;
-    margin: 0 auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }
 
 /* ✅ Enable word wrap after animation completes */
@@ -274,7 +361,7 @@ h2 {
     background-color: rgba(129, 169, 255, 0.1);
     margin-top: 10px;
     padding-left: 10px;
-    border-left: 2px solid #8ed2ff; 
+    border-left: 4px solid #8ed2ff; 
     max-width: 700px; /* Align width */
     margin-left: auto;
     margin-right: auto;
@@ -287,7 +374,7 @@ h2 {
     color: #ff4444; /* Bright red for alert */
     background-color: rgba(255, 68, 68, 0.2); /* Faint red background */
     border-left: 4px solid #ff0000; /* Strong left border */
-    padding: 10px;
+    padding-left: 10px;
     font-family: "Courier New", monospace;
     text-shadow: 0px 0px 4px rgba(255, 0, 0, 0.6);
     max-width: 700px;
@@ -361,5 +448,13 @@ h2 {
         font-size: 16px;
         margin: 5px auto;
         width: 80%; /* Ensures touch-friendly buttons */
+    }
+
+    .community-grid, .support-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .community-item, .support-item {
+        width: 80%;
     }
 }
