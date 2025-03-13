@@ -176,10 +176,9 @@ h2 {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
 }
 
-/* Enable word wrap after animation completes */
+/* ✅ Enable word wrap after animation completes */
 #random-message.typed {
     white-space: normal; /* Allows line breaks */
     word-wrap: break-word;

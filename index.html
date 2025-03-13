@@ -74,7 +74,7 @@ function displayRandomMessage() {
     messageElement.offsetHeight; // Force reflow to restart animation
     messageElement.style.animation = ""; // Restore CSS animation
 
-    // Set text instantly (CSS will handle typing effect)
+    // Clear and set new text
     messageElement.textContent = randomMessage;
     messageElement.classList.remove("typed"); // Prevents line breaks during animation
 
@@ -85,15 +85,14 @@ function displayRandomMessage() {
     // Apply dynamic CSS animation duration
     messageElement.style.animation = `typing ${duration}s steps(${randomMessage.length}, end) forwards, blink-caret 0.75s step-end infinite`;
 
-    // Enable line breaks after animation completes
+    // ✅ Enable text wrapping AFTER animation completes
     setTimeout(() => {
         messageElement.classList.add("typed");
     }, duration * 1000);
 }
 
-// Run the function on page load
+// ✅ Event Listener: Runs `displayRandomMessage` when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", displayRandomMessage);
-
     </script>
     
 
