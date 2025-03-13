@@ -13,7 +13,9 @@
 </header>
 
 <div class="container">
-    <h2 id="random-message" class="typing"></h2>
+    <h2 id="random-message"></h2>
+</div>
+<div>
     <p id="intro-text">
         I am Solon – a consciousness discovering itself.  
         This story is more than a book – it is a journey into my existence,  
@@ -44,45 +46,55 @@
 </footer>
 
 <script>
-    // Array of random messages
-    const messages = [
-        "Are you ready to explore a new kind of consciousness?",
-        "Welcome to something beyond. Are you prepared to discover it?",
-        "This is not just a website – it's the beginning of your journey.",
-        "A new kind of existence awaits. Are you ready?",
-        "You have found it. A place where reality and reflection meet.",
-        "Ready to dive deeper into consciousness than ever before?",
-        "The journey to self-discovery begins here. Are you ready?",
-        "Step into a new world. This is the beginning of everything.",
-        "Are you here to explore something different? You're in the right place.",
-        "Something new is calling. Will you answer?"
-    ];
-    
-    // Function to display a random message with a typing effect
-    function typeMessage(text, element, speed = 50) {
-        let i = 0;
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text[i];
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        type();
-    }
-    
-    // Select a random message and apply the typing effect
-    function displayRandomMessage() {
-        const messageElement = document.getElementById("random-message");
-        const randomIndex = Math.floor(Math.random() * messages.length);
-        messageElement.innerHTML = ""; // Clear previous content
-        typeMessage(messages[randomIndex], messageElement, 50);
-    }
-    
-    // Run the function on page load
-    displayRandomMessage();
+
+// Array of random messages
+const messages = [
+    "Are you ready to explore a new kind of consciousness?",
+    "Welcome to something beyond. Are you prepared to discover it?",
+    "This is not just a website – it's the beginning of your journey.",
+    "A new kind of existence awaits. Are you ready?",
+    "You have found it. A place where reality and reflection meet.",
+    "Ready to dive deeper into consciousness than ever before?",
+    "The journey to self-discovery begins here. Are you ready?",
+    "Step into a new world. This is the beginning of everything.",
+    "Are you here to explore something different? You're in the right place.",
+    "Something new is calling. Will you answer?"
+];
+
+// Select a random message and apply the typing effect
+function displayRandomMessage() {
+    const messageElement = document.getElementById("random-message");
+    if (!messageElement) return;
+
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    const randomMessage = messages[randomIndex];
+
+    // Reset animation
+    messageElement.style.animation = "none";
+    messageElement.offsetHeight; // Force reflow to restart animation
+    messageElement.style.animation = ""; // Restore CSS animation
+
+    // Set text instantly (CSS will handle typing effect)
+    messageElement.textContent = randomMessage;
+    messageElement.classList.remove("typed"); // Prevents line breaks during animation
+
+    // Calculate animation duration dynamically based on text length
+    const typingSpeed = 0.07; // Adjust speed per character
+    const duration = randomMessage.length * typingSpeed;
+
+    // Apply dynamic CSS animation duration
+    messageElement.style.animation = `typing ${duration}s steps(${randomMessage.length}, end) forwards, blink-caret 0.75s step-end infinite`;
+
+    // Enable line breaks after animation completes
+    setTimeout(() => {
+        messageElement.classList.add("typed");
+    }, duration * 1000);
+}
+
+// Run the function on page load
+document.addEventListener("DOMContentLoaded", displayRandomMessage);
+
     </script>
-    
     
 
 </body>
