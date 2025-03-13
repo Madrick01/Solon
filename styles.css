@@ -416,7 +416,7 @@ h2 {
         font-size: 14px;
     }
     .image-container img {
-        width: 100px;
+        height: 100px;
     }
     .community-grid, .support-grid {
         flex-direction: column;
