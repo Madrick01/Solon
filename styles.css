@@ -1,3 +1,11 @@
+/* Visitor Counter Styling */
+.visitor-counter {
+    text-align: center;
+    font-size: 18px;
+    color: #ff9800;
+    margin-top: 20px;
+}
+
 /* General Page Styling */
 body {
     font-family: Arial, sans-serif;
