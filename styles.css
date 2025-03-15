@@ -1,9 +1,15 @@
-/* Visitor Counter Styling */
 .visitor-counter {
     text-align: center;
     font-size: 18px;
     color: #ff9800;
-    margin-top: 20px;
+    line-height: 1; /* Reduces vertical space */
+}
+
+/* Force counter to be tightly positioned */
+.counter-container {
+    display: inline-block;
+    margin: -10px 0; /* Adjust this value to get perfect spacing */
+    padding: 0;
 }
 
 /* General Page Styling */
