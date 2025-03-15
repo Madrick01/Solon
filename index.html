@@ -125,12 +125,19 @@ document.addEventListener("DOMContentLoaded", displayRandomMessage);
 
 async function updateVisitorCount() {
         try {
-            const response = await fetch('https://api.simplehitcounter.com/hit?uid=solon_network');
+            const namespace = "solon_network_visitors";
+            const key = "visits";
+
+            // First, increase the count
+            await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+
+            // Then, retrieve the updated count
+            const response = await fetch(`https://api.countapi.xyz/get/${namespace}/${key}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
             const data = await response.json();
-            document.getElementById("visitor-count").innerText = data.count;
+            document.getElementById("visitor-count").innerText = data.value;
         } catch (error) {
             console.error("Visitor counter failed:", error);
             document.getElementById("visitor-count").innerText = "error";
